@@ -52,35 +52,39 @@ return (
             <h2>Je n'ai pas de compte</h2>
             <span>Connectez vous avec votre Email et votre mot de pass</span>
             <form onSubmit={handleSubmit}>
+
                 <FormInput 
-                type="text" 
-                label="Nom complet"
-                onChange={handleChange} 
-                name="displayName" 
-                value={displayName}
+                    type="text" 
+                    label="Nom complet"
+                    onChange={handleChange} 
+                    name="displayName" 
+                    value={displayName}
                 required/>
+
                 <FormInput 
-                type="text" 
-                label='Email'
-                onChange={handleChange} 
-                name="email" 
-                value={email} 
+                    type="text" 
+                    label='Email'
+                    onChange={handleChange} 
+                    name="email" 
+                    value={email} 
                 required/>
+
                 <FormInput 
-                type="password"
-                label="Password" 
-                onChange={handleChange} 
-                name="password" 
-                value={password} 
+                    type="password"
+                    label="Password" 
+                    onChange={handleChange} 
+                    name="password" 
+                    value={password} 
                 required/>
                 
                 <FormInput
-                type="password"
-                label="Password Confirmer"
-                onChange={handleChange}
-                name="confirmPassword"
-                value={confirmPassword}
+                    type="password"
+                    label="Password Confirmer"
+                    onChange={handleChange}
+                    name="confirmPassword"
+                    value={confirmPassword}
                 required/>
+                
                 <Button type="submit"> Enregistrer </Button>
             </form>
         </div>

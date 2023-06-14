@@ -3,13 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from './routes/navigation/navigation.component';
 import Auth from './routes/authentification/authentification.component';
 import Counter from './routes/testing/counter';
-
-const Shop = () => {
-  return (
-    <h1>Bonjour ma boutique</h1>
-  )
-}
-
+import Shop from './components/shop/shop.component';
 
 function App() {
   return (
