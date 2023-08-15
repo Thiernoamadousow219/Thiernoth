@@ -4,8 +4,8 @@ import {
      createUserDocumentFromAuth,
      signInWithGooglePopup} from '../../routes/utils/firebase/firebase'
 import FormInput from "../form-input/form-input.component";
-import '../form-input/form-input.styles.scss';
-import Button from '../button/button.component';
+import '../form-input/form-input.styles';
+import Button , {BUTTON_TYPES_CLASSES} from '../button/button.component';
 import './sign-in.styles.scss';
 
 const defaultFields = {
@@ -75,7 +75,7 @@ return (
                 />
                 <div className="buttons-container">
                     <Button type='submit'> Sign-in </Button>
-                    <Button type='button' buttonType={'google'} onClick={signInwithGoogle}> Google sign in </Button>
+                    <Button buttonType={BUTTON_TYPES_CLASSES.google}  type='button' onClick={signInwithGoogle}> Google sign in </Button>
                 </div>
                 
             </form>
