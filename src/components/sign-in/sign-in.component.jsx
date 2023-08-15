@@ -6,6 +6,7 @@ import FormInput from "../form-input/form-input.component";
 import '../form-input/form-input.styles';
 import Button , {BUTTON_TYPES_CLASSES} from '../button/button.component';
 import './sign-in.styles.scss';
+import { useNavigate } from 'react-router-dom';
 
 const defaultFields = {
     email : "",
@@ -16,6 +17,7 @@ const SignInForm = () => {
 
     const [formFields, setformFields] = useState(defaultFields);
     const {email,password} = formFields;
+    const    navigate = useNavigate();
 
     const handleChange = (event) => {
         const {name,value} = event.target;
@@ -30,8 +32,10 @@ const SignInForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const {user} = await signIncreateAuthUserWithEmailAndPassword(email,password);
+            const user = await signIncreateAuthUserWithEmailAndPassword(email,password);
+            console.log(user.user);
             resetFormField();
+            navigate('/');
         } catch (error) {
             switch (error.code) {
                 case "auth/wrong-password":
