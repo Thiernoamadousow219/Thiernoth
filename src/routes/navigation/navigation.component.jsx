@@ -17,6 +17,7 @@ console.log(setIsCartOpen)
        await signOutUser();
        setCurrentUser(null);
     }   
+    
     return (
         <Fragment>
           <NavigationContainer>
