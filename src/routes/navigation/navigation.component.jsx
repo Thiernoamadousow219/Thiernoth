@@ -11,13 +11,13 @@ import {NavigationContainer,NavLink,NavLinks,LogoContainer} from "./navigation.s
 const Navigation = () => {
     const {currentUser,setCurrentUser}  = useContext(UserContext);
     const {isCartOpen, setIsCartOpen}   = useContext(CartContext);
-console.log(setIsCartOpen)
+    console.log(setIsCartOpen)
 
     const signOutHandler = async() => {
        await signOutUser();
        setCurrentUser(null);
     }   
-    
+
     return (
         <Fragment>
           <NavigationContainer>
